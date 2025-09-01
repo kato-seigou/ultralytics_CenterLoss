@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ultraltyics-CenterLoss"        # 配布名（GitHub経由ならPyPI衝突なし）
+version = "0.1.0"
+description = "Ultralytics with CenterLoss (custom build)"
+readme = "README.md"
+requires-python = ">=3.8"
+# 必要なら依存を足す。最小なら空でOK（Torchなどは別インストール推奨）
+dependencies = []
+
+[tool.setuptools.packages.find]
+include = ["ultralytics_CenterLoss*"]
