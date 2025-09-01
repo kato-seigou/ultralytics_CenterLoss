@@ -11,5 +11,17 @@ requires-python = ">=3.8"
 # 必要なら依存を足す。最小なら空でOK（Torchなどは別インストール推奨）
 dependencies = []
 
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.package-data]
+ultralytics = [
+  "cfg/*.yaml",
+  "cfg/**/*.yaml",
+  "assets/*",
+  "assets/**/*"
+]
+
+
 [tool.setuptools.packages.find]
 include = ["ultralytics*"]
